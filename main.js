@@ -46,20 +46,25 @@ function updateValues(){
         amounts[0] = 0; 
     }
     for(var i = 0; i < amounts[6]; i++){
-        if(amounts[3] <= amounts[4] * 2 && amounts[4] == amounts[5]){
-            if(amounts[1] >= costs[3]){
-                amounts[1] -= costs[3];
-                amounts[3] += 1;
+        if(amounts[3] == amounts[4] * 2 && amounts[3] == amounts[5] * 2){
+            if(amounts[1] >= costs[3] * 2){
+                amounts[1] -= costs[3] * 2;
+                amounts[3] += 2;
             }
-        }else if(amounts[3] > amounts[4] * 2 && amounts[4] == amounts[5]){
+        }else if(amounts[4] < amounts[3]/2 && amounts[4] == amounts[5]){
             if(amounts[1] >= costs[4]){
                 amounts[1] -= costs[4];
                 amounts[4] += 1;
             }
-        }else if(amounts[3] == amounts[4] * 2 && amounts[4] > amounts[5]){
+        }else if(amounts[5] < amounts[3]/2 && amounts[5] < amounts[4]){
             if(amounts[1] >= costs[5]){
                 amounts[1] -= costs[5];
                 amounts[5] += 1;
+            }
+        }else if(amounts[3] == (amounts[4] * 2) - 1 && amounts[3] == (amounts[5] * 2) - 1){
+            if(amounts[1] >= costs[3]){
+                amounts[1] -= costs[3];
+                amounts[3] += 1;
             }
         }
     }
