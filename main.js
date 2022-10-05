@@ -1,5 +1,5 @@
-var amounts = [0, 0, 0, 0, 0, 0];
-var names = ['Raw Material', 'Refined Material', 'Collectors', 'Smelters', 'Builders', "Builders^2"];
+var amounts = [0, 0, 0, 0, 0, 0, 0, 0];
+var names = ['Raw Material', 'Refined Material', 'Collectors', 'Smelters', 'Builders', "Builders^2", "Research", "Researchers"];
 
 function onLoad(){
     updateText();
@@ -45,11 +45,20 @@ function updateValues(){
         }
     }
     for(i = 0; i < amounts[5]; i++){
-        if(amounts[1] >= 100){
-            amounts[1] -= 100;
-            amounts[4] += 1;
+        if(amounts[4] == amounts[7]){
+            if(amounts[1] >= 100){
+                amounts[1] -= 100;
+                amounts[4] += 1;
+            }
+        }else if(amounts[4] > amounts[7]){
+            if(amounts[1] >= 250){
+                amounts[1] -= 250;
+                amounts[7] += 1;
+            }
         }
+        
     }
+    amounts[6] += amounts[7];
     updateText();
 }
 
@@ -88,6 +97,15 @@ function onClick(buttonNum){
                 amounts[5] += 1;
             }
             break;
+        case 6:
+            amounts[6] += 1;
+            break;
+        case 7:
+            if(amounts[1] >= 250){
+                amounts[1] -= 250;
+                amounts[7] += 1;
+            }
+            break;
     }
     updateText();
 }
@@ -96,4 +114,5 @@ function devStart(){
     amounts[2] = 1;
     amounts[3] = 1;
     amounts[4] = 1;
+    amounts[5] = 1;
 }
