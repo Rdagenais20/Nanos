@@ -16,7 +16,7 @@
     width:200px;
     height:100px;
 }
-#tier0{
+#tier0,#tier1{
     position:relative;
     top:0px;
     width:600px;
@@ -27,4 +27,7 @@
     left:200px;
     width:200px;
     height:200px;
+}
+button{
+    white-space: pre-wrap;
 }

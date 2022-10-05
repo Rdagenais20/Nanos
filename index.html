@@ -11,41 +11,41 @@
         <div id="tier0" class="tier">
             <div id="rawMaterial" class="left">
                 <p id="rawMaterialText">Raw Material: </p>
-                <button onclick="onClick(0);">Collect Raw Material</button>
+                <button id="rawMaterialButton" onclick="onClick(0);">Collect Raw Material</button>
             </div>
             <div id="refinedMaterial" class="middle">
                 <p id="refinedMaterialText">Refined Material: </p>
-                <button onclick="onClick(1);">Smelt Refined Material</button>
+                <button id="refinedMaterialButton" onclick="onClick(1);">Smelt Refined Material</button>
             </div>
             <div id="research" class="right">
                 <p id="researchText">Research: </p>
-                <button onclick="onClick(6);">Generate Research</button>
+                <button id="researchButton" onclick="onClick(2);">Generate Research</button>
             </div>
         </div>
         <div id="tier1" class="tier">
             <div id="collectors" class="left">
                 <p id="collectorsText">Collectors: </p>
-                <button onclick="onClick(2);">Build Collector</button>
+                <button id="collectorsButton" onclick="onClick(3);">Build Collector</button>
             </div>
-            <div id="smelters" class="right">
+            <div id="smelters" class="middle">
                 <p id="smeltersText">Smelters: </p>
-                <button onclick="onClick(3);">Build Smelter</button>
+                <button id="smeltersButton" onclick="onClick(4);">Build Smelter</button>
+            </div>
+            <div id="researchers" class="right">
+                <p id="researchersText">Researchers: </p>
+                <button id="researchersButton" onclick="onClick(6);">Build Researcher</button>
             </div>
         </div>
         <div id="tier2" class="tier">
             <div id="builders" class="left">
                 <p id="buildersText">Builders: </p>
-                <button onclick="onClick(4);">Build Builder</button>
-            </div>
-            <div id="researchers" class="right">
-                <p id="researchersText">Researchers: </p>
-                <button onclick="onClick(7);">Build Researcher</button>
+                <button id="buildersButton" onclick="onClick(5);">Build Builder</button>
             </div>
         </div>
         <div id="tier3" class="tier">
             <div id="builders^2" class="left">
                 <p id="builders^2Text">Builders^2: </p>
-                <button onclick="onClick(5);">Build Builder^2</button>
+                <button id="builders^2Button" onclick="onClick(7);">Build Builder^2</button>
             </div>
         </div>
     </body>
